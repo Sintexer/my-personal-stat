@@ -1,5 +1,7 @@
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
+val appVersion by extra("0.0.1")
+
 plugins {
     java
     kotlin("jvm") version "1.5.21" apply false
@@ -8,10 +10,8 @@ plugins {
     id("io.spring.dependency-management") version "1.0.11.RELEASE" apply false
 }
 
-val app_version by extra("0.0.1")
-
 group = "com.ilyabuhlakou"
-version = app_version
+version = appVersion
 java.sourceCompatibility = JavaVersion.VERSION_11
 
 configurations {
@@ -37,7 +37,7 @@ subprojects{
     }
 
     group = "com.ilyabuhlakou.mps"
-    version = app_version
+    version = appVersion
     java.sourceCompatibility = JavaVersion.VERSION_11
 
     dependencies{

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/mps-app/mps.mps-app.test.iml" filepath="$PROJECT_DIR$/.idea/modules/mps-app/mps.mps-app.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/mps-service/mps.mps-service.main.iml" filepath="$PROJECT_DIR$/.idea/modules/mps-service/mps.mps-service.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/mps-service/mps.mps-service.test.iml" filepath="$PROJECT_DIR$/.idea/modules/mps-service/mps.mps-service.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/mps-telegram/mps.mps-telegram.main.iml" filepath="$PROJECT_DIR$/.idea/modules/mps-telegram/mps.mps-telegram.main.iml" />
+    </modules>
+  </component>
+</project>
