@@ -1,4 +1,5 @@
 val springdocVersion = "1.5.10"
+val hateoasVersion = "1.3.3"
 
 dependencies {
     //Module dependencies
@@ -11,6 +12,9 @@ dependencies {
     //Web
     implementation("org.springframework.boot:spring-boot-starter-webflux")
     implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
+
+    //HATEOAS
+    implementation("org.springframework.hateoas:spring-hateoas:$hateoasVersion")
 }
 
 tasks.bootJar {
