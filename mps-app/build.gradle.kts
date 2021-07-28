@@ -1,22 +1,18 @@
-val springdocVersion = "1.5.9"
+val springdocVersion = "1.5.10"
 
 dependencies {
-	//Module dependencies
-	implementation(project(":mps-service"))
-	implementation(project(":mps-data"))
+    //Module dependencies
+    implementation(project(":mps-service"))
+    implementation(project(":mps-data"))
 
-	//API Documentation
-	implementation("org.springdoc:springdoc-openapi-kotlin:$springdocVersion")
-	implementation("org.springdoc:springdoc-openapi-hateoas:$springdocVersion")
-	implementation("org.springdoc:springdoc-openapi-ui:$springdocVersion")
-//	implementation("org.springdoc:springdoc-openapi-security:1.5.9")
+    //API Documentation
+    implementation("org.springdoc:springdoc-openapi-webflux-ui:$springdocVersion")
 
-	//Web
-	implementation("org.springframework.boot:spring-boot-starter-hateoas")
-	implementation("org.springframework.boot:spring-boot-starter-web")
-	implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
+    //Web
+    implementation("org.springframework.boot:spring-boot-starter-webflux")
+    implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
 }
 
-tasks.bootJar{
-	archiveFileName.set("mps-backend.jar")
+tasks.bootJar {
+    archiveFileName.set("mps-backend.jar")
 }
