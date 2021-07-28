@@ -3,3 +3,14 @@ spring:
     mongodb:
       host: 127.0.0.1
       port: 27017
+      database: mps-db
+      username: ${MONGO_INITDB_ROOT_USERNAME}
+      password: ${MONGO_INITDB_ROOT_PASSWORD}
+
+server:
+  servlet:
+    contextPath: /api
+
+springdoc:
+  swagger-ui:
+    path: /swagger-ui

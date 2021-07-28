@@ -17,7 +17,7 @@ class PersonalStatMapperImpl
                 entry.key to entry.value.map(statEntryMapper::mapToEntryEntity)
             }.toMap()
             PersonalStatEntity(
-                id = it.id,
+                id = "",
                 name = it.name,
                 dateCreated = it.dateCreated,
                 lists = lists
@@ -31,7 +31,6 @@ class PersonalStatMapperImpl
                 entry.key to entry.value.map(statEntryMapper::mapToEntry)
             }.toMap()
             PersonalStat(
-                id = it.id,
                 name = it.name,
                 dateCreated = it.dateCreated,
                 lists = lists

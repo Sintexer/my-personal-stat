@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestMethod
 import org.springframework.web.bind.annotation.RestController
 
 @RestController
-@RequestMapping("/api/stat")
+@RequestMapping("/stat")
 class StatController
 @Autowired constructor(private val personalStatService: PersonalStatService) {
 

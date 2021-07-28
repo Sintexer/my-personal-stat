@@ -33,9 +33,6 @@ class PersonalStatServiceImpl
     }
 
     override fun update(personalStat: PersonalStat): PersonalStat {
-        val savedEntity =
-            repository.findById(personalStat.id).orElseThrow { StatNotFoundException("Stat not found") }
-        println("updated")
         TODO("Not yet implemented")
     }
 

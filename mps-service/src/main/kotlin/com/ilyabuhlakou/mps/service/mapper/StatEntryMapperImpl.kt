@@ -10,7 +10,7 @@ class StatEntryMapperImpl : StatEntryMapper {
     override fun mapToEntryEntity(statEntry: StatEntry): StatEntryEntity {
         return statEntry.let {
             StatEntryEntity(
-                it.id,
+                "",
                 it.dateCreated,
                 it.content
             )
@@ -20,7 +20,6 @@ class StatEntryMapperImpl : StatEntryMapper {
     override fun mapToEntry(statEntryEntity: StatEntryEntity): StatEntry {
         return statEntryEntity.let {
             StatEntry(
-                it.id,
                 it.dateCreated,
                 it.content
             )
