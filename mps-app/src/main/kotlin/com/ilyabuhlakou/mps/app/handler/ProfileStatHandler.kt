@@ -7,5 +7,6 @@ import reactor.core.publisher.Mono
 interface ProfileStatHandler {
 
     fun getProfileStat(request: ServerRequest): Mono<ServerResponse>
+    fun saveProfileStat(request: ServerRequest): Mono<ServerResponse>
 
 }

@@ -3,8 +3,8 @@ val hateoasVersion = "1.3.3"
 
 dependencies {
     //Module dependencies
-    implementation(project(":mps-service"))
     implementation(project(":mps-data"))
+    implementation(project(":mps-service"))
 
     //API Documentation
     implementation("org.springdoc:springdoc-openapi-webflux-ui:$springdocVersion")
