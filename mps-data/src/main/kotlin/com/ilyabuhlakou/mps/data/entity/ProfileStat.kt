@@ -6,13 +6,16 @@ import org.springframework.data.annotation.LastModifiedDate
 import org.springframework.data.mongodb.core.mapping.Document
 import java.time.LocalDateTime
 
+/**
+ * ProfileStat entity managed in MongoDB
+ */
 @Document
 data class ProfileStat(
     @Id
     val id: String?,
-    val name: String,
+    var name: String,
     @CreatedDate
-    val dateRegistered: LocalDateTime = LocalDateTime.now(),
+    var dateRegistered: LocalDateTime = LocalDateTime.now(),
     @LastModifiedDate
-    val dateUpdated: LocalDateTime = LocalDateTime.now()
+    var dateUpdated: LocalDateTime = LocalDateTime.now()
 )
