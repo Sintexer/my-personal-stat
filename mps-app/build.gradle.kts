@@ -1,5 +1,6 @@
 val springdocVersion = "1.5.10"
 val hateoasVersion = "1.3.3"
+val webmvcVersion = "5.3.9"
 
 dependencies {
     //Module dependencies
@@ -15,6 +16,8 @@ dependencies {
 
     //HATEOAS
     implementation("org.springframework.hateoas:spring-hateoas:$hateoasVersion")
+    implementation("org.springframework:spring-webmvc:$webmvcVersion")
+
 }
 
 tasks.bootJar {
