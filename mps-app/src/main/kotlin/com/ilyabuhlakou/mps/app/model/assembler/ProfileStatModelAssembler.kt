@@ -22,7 +22,7 @@ class ProfileStatModelAssembler :
     override fun toModel(entity: ProfileStatDto, exchange: ServerWebExchange): Mono<ProfileStatModel> {
         return Mono.just(
             ProfileStatModel(
-                id = entity.id ?: throw EntityIdNotPresentException(""),
+                id = entity.id ?: throw EntityIdNotPresentException(),
                 name = entity.name,
                 dateRegistered = entity.dateRegistered,
                 dateUpdated = entity.dateUpdated,

@@ -12,6 +12,7 @@ dependencies {
 
     //Web
     implementation("org.springframework.boot:spring-boot-starter-webflux")
+    implementation("org.springframework.boot:spring-boot-starter-validation")
     implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
 
     //HATEOAS
