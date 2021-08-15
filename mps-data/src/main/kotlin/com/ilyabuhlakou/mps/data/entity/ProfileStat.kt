@@ -17,5 +17,6 @@ data class ProfileStat(
     @CreatedDate
     var dateRegistered: LocalDateTime = LocalDateTime.now(),
     @LastModifiedDate
-    var dateUpdated: LocalDateTime = LocalDateTime.now()
+    var dateUpdated: LocalDateTime = LocalDateTime.now(),
+    val properties: ProfileProperties = ProfileProperties()
 )

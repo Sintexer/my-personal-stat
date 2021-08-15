@@ -3,6 +3,7 @@ package com.ilyabuhlakou.mps.app.model.assembler
 import com.ilyabuhlakou.mps.app.controller.ProfileStatController
 import com.ilyabuhlakou.mps.app.exception.EntityIdNotPresentException
 import com.ilyabuhlakou.mps.app.model.ProfileStatModel
+import com.ilyabuhlakou.mps.app.model.toProfileStatModel
 import com.ilyabuhlakou.mps.service.dto.ProfileStatDto
 import org.springframework.hateoas.IanaLinkRelations.COLLECTION
 import org.springframework.hateoas.IanaLinkRelations.CREATE_FORM
@@ -21,12 +22,7 @@ class ProfileStatModelAssembler :
 
     override fun toModel(entity: ProfileStatDto, exchange: ServerWebExchange): Mono<ProfileStatModel> {
         return Mono.just(
-            ProfileStatModel(
-                id = entity.id ?: throw EntityIdNotPresentException(),
-                name = entity.name,
-                dateRegistered = entity.dateRegistered,
-                dateUpdated = entity.dateUpdated,
-            ).apply {
+            entity.toProfileStatModel().apply {
                 add(linkTo<ProfileStatController> { receiveProfileStat(id, exchange) }.withSelfRel())
                 add(linkTo<ProfileStatController> { getAll(exchange) }.withRel(COLLECTION))
                 add(linkTo<ProfileStatController> {
